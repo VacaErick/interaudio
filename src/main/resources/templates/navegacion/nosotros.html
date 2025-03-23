@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTER AUDIO - Nosotros</title>
+    <link
+      rel="stylesheet"
+      href="/bootstrap/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link rel="stylesheet" href="/css/estilos.css" />
+  </head>
+  <body style="background-color: #f0f0f0">
+    <!-- Barra de navegación (misma estructura) -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-3"
+        style="background-color: #141d56"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" th:href="@{/}">
+            <img
+              src="images/logo-inverso"
+              alt="INTER AUDIO"
+              width="100"
+              class="hover-scale"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNav"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link d-flex align-items-center"
+                  th:href="@{/}"
+                  data-bs-toggle="tooltip"
+                  title="Página principal"
+                >
+                  <i class="fas fa-home me-2"></i>
+                  Inicio
+                </a>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link" th:href="@{/nosotros}">
+                  <i class="fas fa-users me-2"></i>
+                  Nosotros
+                </a>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-book-open me-2"></i>
+                  Catálogos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/LogoIntec.jpg" alt="Intec" width="150" />
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/logoCommax" alt="Commax" width="150" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-tools me-2"></i>
+                  Instalaciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Interfonía</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Videoporteros</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Abrepuertas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Cercas Eléctricas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-concierge-bell me-2"></i>
+                  Servicios
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Diagnóstico</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Reparación</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Actualización</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Mantenimiento</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link btn-contact" th:href="@{/contacto}">
+                  <i class="fas fa-phone-volume me-2"></i>
+                  Contacto
+                </a>
+              </li>
+            </ul>
+
+            <form class="d-flex ms-lg-4" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control bg-dark text-white"
+                  placeholder="Buscar productos..."
+                  aria-label="Buscar"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido de la página Nosotros -->
+    <main class="py-5">
+      <!-- Sección Hero Nosotros -->
+      <section class="hero-nosotros bg-dark text-white py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h1 class="display-4 mb-4">
+                Más de 15 años protegiendo lo que más importa
+              </h1>
+              <p class="lead">
+                Expertos en sistemas de seguridad y comunicación
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="../images/equipo.jpg"
+                class="img-fluid rounded-3 shadow"
+                alt="Nuestro equipo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nuestra Historia -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-md-6">
+              <img
+                src="../images/historia.jpg"
+                class="img-fluid rounded-3 shadow"
+                alt="Nuestra historia"
+              />
+            </div>
+            <div class="col-md-6">
+              <h2 class="display-5 mb-4">Nuestra Historia</h2>
+              <p class="lead">
+                Fundada en 2008, INTER AUDIO nació con la visión de revolucionar
+                los sistemas de seguridad residencial en México. Comenzamos como
+                un pequeño taller de reparación y hoy somos líderes en
+                instalación de sistemas inteligentes.
+              </p>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                      <h3 class="text-primary">+15,000</h3>
+                      <p>Sistemas instalados</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                      <h3 class="text-primary">98%</h3>
+                      <p>Satisfacción de clientes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Valores Corporativos -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-5 display-5">Nuestros Valores</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm text-center p-4">
+                <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                <h4>Seguridad Garantizada</h4>
+                <p>
+                  Sistemas certificados con los más altos estándares
+                  internacionales
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm text-center p-4">
+                <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                <h4>Enfoque Humano</h4>
+                <p>
+                  Soluciones personalizadas para cada necesidad familiar o
+                  empresarial
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm text-center p-4">
+                <i class="fas fa-certificate fa-3x text-primary mb-3"></i>
+                <h4>Profesionalismo</h4>
+                <p>Técnicos certificados y en constante capacitación</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificaciones -->
+      <section class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5 display-5">Certificaciones y Alianzas</h2>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-3 col-6">
+              <img
+                src="../images/certificacion-ul.jpg"
+                class="img-fluid"
+                alt="Certificación UL"
+              />
+            </div>
+            <div class="col-md-3 col-6">
+              <img
+                src="../images/alianza-commax.jpg"
+                class="img-fluid"
+                alt="Alianza Commax"
+              />
+            </div>
+            <div class="col-md-3 col-6">
+              <img
+                src="../images/certificacion-iso.jpg"
+                class="img-fluid"
+                alt="Certificación ISO"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (misma estructura) -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>+52 555 123 4567</li>
+              <li><i class="fas fa-envelope me-2"></i>info@interaudio.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Horario</h5>
+            <p>
+              Lunes a Viernes: 9 AM - 6 PM<br />
+              Sábados: 10 AM - 2 PM
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-whatsapp fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2024 INTER AUDIO. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
