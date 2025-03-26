@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>INTER AUDIO</title>
+  </head>
+  <body style="background-color: #f0f0f0">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-3"
+        style="background-color: #141d56"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" th:href="@{/}">
+            <img
+              src="images/logo-inverso"
+              alt="INTER AUDIO"
+              width="100"
+              class="hover-scale"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNav"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link d-flex align-items-center"
+                  th:href="@{/}"
+                  data-bs-toggle="tooltip"
+                  title="Página principal"
+                >
+                  <i class="fas fa-home me-2"></i>
+                  Inicio
+                </a>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link" th:href="@{/nosotros}">
+                  <i class="fas fa-users me-2"></i>
+                  Nosotros
+                </a>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-book-open me-2"></i>
+                  Catálogos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/LogoIntec.jpg" alt="Intec" width="150" />
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/logoCommax" alt="Commax" width="150" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-tools me-2"></i>
+                  Instalaciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Interfonía</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Videoporteros</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Abrepuertas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Cercas Eléctricas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-concierge-bell me-2"></i>
+                  Servicios
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Diagnóstico</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Reparación</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Actualización</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Mantenimiento</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link btn-contact" th:href="@{/contacto}">
+                  <i class="fas fa-phone-volume me-2"></i>
+                  Contacto
+                </a>
+              </li>
+            </ul>
+
+            <form class="d-flex ms-lg-4" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control bg-dark text-white"
+                  placeholder="Buscar productos..."
+                  aria-label="Buscar"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br />
+
+    <section class="hero bg-dark text-white py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <h1 class="display-4 mb-3">
+              Seguridad Inteligente para tu Hogar o Negocio
+            </h1>
+            <p class="lead mb-4">
+              Sistemas de comunicación y seguridad certificados con tecnología
+              de última generación
+            </p>
+            <div class="d-flex gap-3">
+              <a th:href="@{/#contacto}" class="btn btn-primary btn-lg"
+                >Solicitar Cotización</a
+              >
+              <a th:href="@{/#servicios}" class="btn btn-outline-light btn-lg"
+                >Ver Servicios</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+              <video autoplay muted loop class="rounded-3">
+                <source src="media/hero-video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                <h3>Protección Integral</h3>
+                <p>
+                  Sistemas completos de seguridad perimetral y acceso controlado
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <i class="fas fa-video fa-3x text-primary mb-3"></i>
+                <h3>Videovigilancia</h3>
+                <p>Cámaras HD con visión nocturna y monitoreo 24/7</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <i class="fas fa-bell fa-3x text-primary mb-3"></i>
+                <h3>Alertas Inteligentes</h3>
+                <p>Sensores y alarmas con notificaciones en tiempo real</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                <h3>Soporte Técnico</h3>
+                <p>Mantenimiento preventivo y correctivo especializado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 display-5">Cómo Trabajamos</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <h4>Diagnóstico Gratuito</h4>
+              <p>Evaluación técnica de tus necesidades</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <h4>Propuesta Personalizada</h4>
+              <p>Diseñamos una solución a tu medida</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <h4>Instalación Profesional</h4>
+              <p>Implementación por técnicos certificados</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">04</div>
+              <h4>Seguimiento Continuo</h4>
+              <p>Monitoreo y mantenimiento preventivo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white">
+      <div class="container">
+        <h2 class="text-center mb-5 display-4">Soluciones de Instalación</h2>
+
+        <div class="row align-items-center mb-5 g-5">
+          <div class="col-md-6">
+            <img
+              src="images/interfon-para-casa.jpg"
+              class="img-fluid rounded-3 shadow"
+              alt="Interfonía Residencial"
+            />
+          </div>
+          <div class="col-md-6">
+            <h3>Interfonía Residencial</h3>
+            <p class="lead">
+              Sistemas completos para viviendas unifamiliares y conjuntos
+              habitacionales
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    Hasta 4 estaciones
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    Control de acceso remoto
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    Resistente a la intemperie
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    Instalación en 24h
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="btn btn-outline-light mt-3">Saber más</a>
+          </div>
+        </div>
+
+        <div class="row align-items-center mb-5 g-5 flex-md-row-reverse">
+          <div class="col-md-6">
+            <img
+              src="images/interfon-edificio.jpg"
+              class="img-fluid rounded-3 shadow"
+              alt="Sistema Comercial"
+            />
+          </div>
+          <div class="col-md-6">
+            <h3>Intercomunicadores Comerciales</h3>
+            <p class="lead">
+              Sistemas escalables para edificios corporativos y complejos
+              empresariales
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    Hasta 50 estaciones
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    Integración con CCTV
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    Control de acceso biométrico
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    Monitoreo centralizado
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="btn btn-outline-light mt-3">Saber más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div
+              id="testimoniosCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner rounded-3">
+                <div class="carousel-item active">
+                  <div class="testimonio-card p-4 p-lg-5">
+                    <div class="d-flex align-items-center mb-4">
+                      <img
+                        src="images/cliente1.jpg"
+                        class="rounded-circle me-3"
+                        width="60"
+                        alt="Cliente 1"
+                      />
+                      <div>
+                        <h5 class="mb-0">María González</h5>
+                        <small>Directora de Condominios Las Palmas</small>
+                      </div>
+                    </div>
+                    <p class="lead">
+                      <i class="fas fa-quote-left text-primary me-2"></i>
+                      Excelente servicio desde el diagnóstico hasta la
+                      instalación. Nuestro sistema de seguridad aumentó un 40%
+                      en eficiencia.
+                      <i class="fas fa-quote-right text-primary ms-2"></i>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="testimonio-card p-4 p-lg-5">
+                    <div class="d-flex align-items-center mb-4">
+                      <img
+                        src="images/cliente2.jpg"
+                        class="rounded-circle me-3"
+                        width="60"
+                        alt="Cliente 2"
+                      />
+                      <div>
+                        <h5 class="mb-0">Carlos Mendoza</h5>
+                        <small>Propietario Residencial Santa Fe</small>
+                      </div>
+                    </div>
+                    <p class="lead">
+                      <i class="fas fa-quote-left text-primary me-2"></i>
+                      La mejor inversión en seguridad que hemos hecho. Respuesta
+                      inmediata en soporte técnico las 24 horas.
+                      <i class="fas fa-quote-right text-primary ms-2"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#testimoniosCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#testimoniosCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="cta-box bg-primary text-white p-5 rounded-3 shadow-lg">
+              <div class="text-center">
+                <i class="fas fa-calendar-check fa-3x mb-4"></i>
+                <h3 class="mb-3">¿Listo para comenzar?</h3>
+                <p class="mb-4 fs-5">
+                  Agenda una asesoría gratuita con nuestros ingenieros
+                  especializados
+                </p>
+                <a href="#contacto" class="btn btn-light btn-lg px-5 py-3">
+                  <i class="fas fa-phone me-2"></i>Agendar Ahora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var myCarousel = document.querySelector("#testimoniosCarousel");
+        var carousel = new bootstrap.Carousel(myCarousel, {
+          interval: 5000,
+          pause: "hover",
+        });
+      });
+    </script>
+    <br />
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>+52 555 123 4567</li>
+              <li><i class="fas fa-envelope me-2"></i>info@interaudio.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Horario</h5>
+            <p>
+              Lunes a Viernes: 9 AM - 6 PM<br />
+              Sábados: 10 AM - 2 PM
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-whatsapp fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2024 INTER AUDIO. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

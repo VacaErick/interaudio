@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <title>Detalle de Producto - INTER AUDIO</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-3"
+        style="background-color: #141d56"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" th:href="@{/}">
+            <img
+              src="images/logo-inverso"
+              alt="INTER AUDIO"
+              width="100"
+              class="hover-scale"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNav"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link d-flex align-items-center"
+                  th:href="@{/}"
+                  data-bs-toggle="tooltip"
+                  title="Página principal"
+                >
+                  <i class="fas fa-home me-2"></i>
+                  Inicio
+                </a>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link" th:href="@{/nosotros}">
+                  <i class="fas fa-users me-2"></i>
+                  Nosotros
+                </a>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-book-open me-2"></i>
+                  Catálogos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/LogoIntec.jpg" alt="Intec" width="150" />
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/logoCommax" alt="Commax" width="150" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-tools me-2"></i>
+                  Instalaciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Interfonía</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Videoporteros</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Abrepuertas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Cercas Eléctricas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-concierge-bell me-2"></i>
+                  Servicios
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Diagnóstico</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Reparación</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Actualización</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Mantenimiento</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link btn-contact" th:href="@{/contacto}">
+                  <i class="fas fa-phone-volume me-2"></i>
+                  Contacto
+                </a>
+              </li>
+            </ul>
+
+            <form class="d-flex ms-lg-4" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control bg-dark text-white"
+                  placeholder="Buscar productos..."
+                  aria-label="Buscar"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-5">
+      <!-- Ruta de navegación -->
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="catalogo.html">Catálogo</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Detalle del Producto
+          </li>
+        </ol>
+      </nav>
+
+      <div class="row g-5">
+        <!-- Galería de imágenes -->
+        <div class="col-lg-6">
+          <div class="product-gallery">
+            <div class="main-image mb-4">
+              <img
+                src="https://picsum.photos/800/600"
+                class="img-fluid rounded-3 shadow"
+                alt="Producto"
+                id="mainImage"
+              />
+            </div>
+            <div class="thumbnail-grid row g-3">
+              <div class="col-3">
+                <img
+                  src="https://picsum.photos/200/150"
+                  class="img-thumbnail active"
+                  alt="Miniatura 1"
+                  onclick="changeImage(this)"
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="https://picsum.photos/201/150"
+                  class="img-thumbnail"
+                  alt="Miniatura 2"
+                  onclick="changeImage(this)"
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="https://picsum.photos/202/150"
+                  class="img-thumbnail"
+                  alt="Miniatura 3"
+                  onclick="changeImage(this)"
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="https://picsum.photos/203/150"
+                  class="img-thumbnail"
+                  alt="Miniatura 4"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Información del producto -->
+        <div class="col-lg-6">
+          <div class="product-details card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h1 class="product-title mb-3">Videoportero Digital HD</h1>
+              <div class="d-flex align-items-center mb-4">
+                <span class="badge bg-primary me-3">Nuevo</span>
+                <div class="rating">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <span class="ms-2">(15 reseñas)</span>
+                </div>
+              </div>
+
+              <h3 class="text-primary mb-4">
+                $25,999
+                <small class="text-muted text-decoration-line-through"
+                  >$29,999</small
+                >
+              </h3>
+
+              <div class="product-meta mb-4">
+                <p class="mb-2">
+                  <i class="fas fa-tag me-2"></i>
+                  Categoría: <strong>Videoporteros</strong>
+                </p>
+                <p class="mb-2">
+                  <i class="fas fa-box-open me-2"></i>
+                  Disponibilidad: <span class="text-success">En stock</span>
+                </p>
+                <p class="mb-0">
+                  <i class="fas fa-barcode me-2"></i>
+                  SKU: VP-2024-HD
+                </p>
+              </div>
+
+              <div class="product-specs mb-4">
+                <h5 class="mb-3">Características principales:</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Pantalla
+                    táctil de 7" HD
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Conectividad
+                    WiFi
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Almacenamiento
+                    en la nube
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Reconocimiento
+                    facial
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Instalación
+                    profesional incluida
+                  </li>
+                </ul>
+              </div>
+
+              <div class="d-grid gap-3 d-md-flex">
+                <button class="btn btn-primary btn-lg flex-grow-1">
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Solicitar Cotización
+                </button>
+                <button class="btn btn-outline-secondary btn-lg">
+                  <i class="fas fa-heart me-2"></i>
+                  Favorito
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Descripción técnica -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h4 class="mb-4">Especificaciones técnicas</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th>Resolución</th>
+                        <td>1920 x 1080 px</td>
+                      </tr>
+                      <tr>
+                        <th>Ángulo de visión</th>
+                        <td>150° horizontal</td>
+                      </tr>
+                      <tr>
+                        <th>Alimentación</th>
+                        <td>12V DC</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-6">
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th>Dimensiones</th>
+                        <td>180 x 120 x 25 mm</td>
+                      </tr>
+                      <tr>
+                        <th>Temperatura operación</th>
+                        <td>-10°C a 50°C</td>
+                      </tr>
+                      <tr>
+                        <th>Garantía</th>
+                        <td>3 años</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Productos relacionados -->
+      <section class="related-products mt-5">
+        <h3 class="mb-4">Productos relacionados</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <!-- Repetir 4 veces -->
+          <div class="col">
+            <div class="card product-card h-100">
+              <img
+                src="https://picsum.photos/300/200"
+                class="card-img-top"
+                alt="Producto relacionado"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Interfon Digital</h5>
+                <p class="card-text text-primary fw-bold">$18,499</p>
+                <a href="#" class="btn btn-outline-primary"> Ver Detalles </a>
+              </div>
+            </div>
+          </div>
+          <!-- Fin repetición -->
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Función para cambiar imágenes
+      function changeImage(element) {
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = element.src;
+
+        document.querySelectorAll(".thumbnail-grid img").forEach((img) => {
+          img.classList.remove("active");
+        });
+        element.classList.add("active");
+      }
+
+      // Simular carga de datos del producto
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("id");
+      console.log(`Cargando detalles del producto ID: ${productId}`);
+    </script>
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>+52 555 123 4567</li>
+              <li><i class="fas fa-envelope me-2"></i>info@interaudio.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Horario</h5>
+            <p>
+              Lunes a Viernes: 9 AM - 6 PM<br />
+              Sábados: 10 AM - 2 PM
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-whatsapp fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2024 INTER AUDIO. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTER AUDIO - Contacto</title>
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+  </head>
+  <body style="background-color: #f0f0f0">
+    <!-- Barra de navegación (misma estructura) -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-3"
+        style="background-color: #141d56"
+      >
+        <div class="container-fluid">
+          <!-- Logo con efecto hover -->
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="images/logo-inverso"
+              alt="INTER AUDIO"
+              width="100"
+              class="hover-scale"
+            />
+          </a>
+
+          <!-- Botón móvil mejorado -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú principal -->
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNav"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <!-- Inicio -->
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link d-flex align-items-center"
+                  href="../index.html"
+                  data-bs-toggle="tooltip"
+                  title="Página principal"
+                >
+                  <i class="fas fa-home me-2"></i>
+                  Inicio
+                </a>
+              </li>
+
+              <!-- Nosotros -->
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="navegacion/nosotros.html">
+                  <i class="fas fa-users me-2"></i>
+                  Nosotros
+                </a>
+              </li>
+
+              <!-- Catálogos (Dropdown) -->
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-book-open me-2"></i>
+                  Catálogos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="navegacion/catalogoIntec.html"
+                    >
+                      <img src="images/LogoIntec.jpg" alt="Intec" width="150" />
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="navegacion/catalogoComax.html"
+                    >
+                      <img src="images/logoCommax" alt="Commax" width="150" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Instalaciones (Dropdown) -->
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-tools me-2"></i>
+                  Instalaciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/instalaciones.html#interfon"
+                      >Interfonía</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/instalaciones.html#videoportero"
+                      >Videoporteros</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/instalaciones.html#abrepuertas"
+                      >Abrepuertas</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/instalaciones.html#cerca"
+                      >Cercas Eléctricas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Servicios (Dropdown) -->
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-concierge-bell me-2"></i>
+                  Servicios
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/servicios.html#revision"
+                      >Diagnóstico</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/servicios.html#reparacion"
+                      >Reparación</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/servicios.html#cambio"
+                      >Actualización</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/servicios.html#mantenimiento"
+                      >Mantenimiento</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Contacto destacado -->
+              <li class="nav-item mx-2">
+                <a class="nav-link btn-contact" href="navegacion/contacto.html">
+                  <i class="fas fa-phone-volume me-2"></i>
+                  Contacto
+                </a>
+              </li>
+            </ul>
+
+            <!-- Buscador mejorado -->
+            <form class="d-flex ms-lg-4" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control bg-dark text-white"
+                  placeholder="Buscar productos..."
+                  aria-label="Buscar"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido de la página Contacto -->
+    <main class="py-5">
+      <section class="contacto-hero bg-dark text-white py-5">
+        <div class="container text-center">
+          <h1 class="display-4 mb-3">Contacta a nuestros expertos</h1>
+          <p class="lead">
+            Recibe asesoría personalizada para tu proyecto de seguridad
+          </p>
+        </div>
+      </section>
+
+      <div class="container my-5">
+        <div class="row g-5">
+          <!-- Formulario -->
+          <div class="col-lg-7">
+            <div class="card shadow-sm p-4">
+              <h2 class="mb-4">Solicitud de servicio</h2>
+              <form id="formContacto">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label"
+                      >Nombre completo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label"
+                      >Correo electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefono"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="servicio" class="form-label"
+                      >Tipo de servicio</label
+                    >
+                    <select class="form-select" id="servicio" required>
+                      <option value="">Seleccione...</option>
+                      <option>Instalación nueva</option>
+                      <option>Mantenimiento</option>
+                      <option>Reparación</option>
+                      <option>Actualización de sistema</option>
+                      <option>Cotización</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="fecha" class="form-label"
+                      >Fecha preferente</label
+                    >
+                    <input type="date" class="form-control" id="fecha" />
+                  </div>
+                  <div class="col-12">
+                    <label for="mensaje" class="form-label"
+                      >Detalles del servicio</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="mensaje"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="terms"
+                        required
+                      />
+                      <label class="form-check-label" for="terms">
+                        Acepto la política de privacidad
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      <i class="fas fa-paper-plane me-2"></i>Enviar solicitud
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Información de contacto -->
+          <div class="col-lg-5">
+            <div class="card shadow-sm p-4 h-100">
+              <h3 class="mb-4">Información de contacto</h3>
+              <ul class="list-unstyled">
+                <li class="mb-4">
+                  <i class="fas fa-map-marker-alt fa-2x text-primary me-3"></i>
+                  <h5>Oficinas centrales</h5>
+                  <p>Av. Tecnológico #123<br />Col. Centro, CDMX</p>
+                </li>
+                <li class="mb-4">
+                  <i class="fas fa-phone fa-2x text-primary me-3"></i>
+                  <h5>Teléfonos</h5>
+                  <p>
+                    Oficina: 55 1234 5678<br />
+                    Emergencias: 55 8765 4321
+                  </p>
+                </li>
+                <li class="mb-4">
+                  <i class="fas fa-envelope fa-2x text-primary me-3"></i>
+                  <h5>Correos electrónicos</h5>
+                  <p>
+                    Ventas: ventas@interaudio.com<br />
+                    Soporte: soporte@interaudio.com
+                  </p>
+                </li>
+                <li>
+                  <i class="fas fa-clock fa-2x text-primary me-3"></i>
+                  <h5>Horario de atención</h5>
+                  <p>
+                    Lunes a Viernes: 9am - 6pm<br />
+                    Sábados: 10am - 2pm
+                  </p>
+                </li>
+              </ul>
+              <hr class="my-4" />
+              <div class="text-center">
+                <h5 class="mb-3">Síguenos en redes</h5>
+                <div class="social-links">
+                  <a href="#" class="btn btn-outline-dark me-2">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="btn btn-outline-dark me-2">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="btn btn-outline-dark">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="ratio ratio-16x9 shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.888244786732!2d-99.15555598453357!3d19.42602024570706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff2b3f509719%3A0x6945d092a4b13a14!2sPalacio%20de%20Bellas%20Artes!5e0!3m2!1ses-419!2smx!4v1658954344788!5m2!1ses-419!2smx"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (misma estructura) -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>+52 555 123 4567</li>
+              <li><i class="fas fa-envelope me-2"></i>info@interaudio.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Horario</h5>
+            <p>
+              Lunes a Viernes: 9 AM - 6 PM<br />
+              Sábados: 10 AM - 2 PM
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-whatsapp fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2024 INTER AUDIO. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

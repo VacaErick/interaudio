@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTER AUDIO - Instalaciones</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link rel="stylesheet" href="/css/estilos.css" />
+  </head>
+  <body style="background-color: #f0f0f0">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-3"
+        style="background-color: #141d56"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" th:href="@{/}">
+            <img
+              src="images/logo-inverso"
+              alt="INTER AUDIO"
+              width="100"
+              class="hover-scale"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNav"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link d-flex align-items-center"
+                  th:href="@{/}"
+                  data-bs-toggle="tooltip"
+                  title="Página principal"
+                >
+                  <i class="fas fa-home me-2"></i>
+                  Inicio
+                </a>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link" th:href="@{/nosotros}">
+                  <i class="fas fa-users me-2"></i>
+                  Nosotros
+                </a>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-book-open me-2"></i>
+                  Catálogos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/LogoIntec.jpg" alt="Intec" width="150" />
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/logoCommax" alt="Commax" width="150" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-tools me-2"></i>
+                  Instalaciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Interfonía</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Videoporteros</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Abrepuertas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Cercas Eléctricas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-concierge-bell me-2"></i>
+                  Servicios
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Diagnóstico</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Reparación</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Actualización</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Mantenimiento</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link btn-contact" th:href="@{/contacto}">
+                  <i class="fas fa-phone-volume me-2"></i>
+                  Contacto
+                </a>
+              </li>
+            </ul>
+
+            <form class="d-flex ms-lg-4" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control bg-dark text-white"
+                  placeholder="Buscar productos..."
+                  aria-label="Buscar"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5">
+      <!-- Hero Section -->
+      <section class="instalaciones-hero bg-dark text-white py-5">
+        <div class="container text-center">
+          <h1 class="display-4 mb-3">Soluciones de Instalación Profesional</h1>
+          <p class="lead">Sistemas adaptados a tus necesidades específicas</p>
+        </div>
+      </section>
+
+      <!-- Tipos de Instalaciones -->
+      <section class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5 display-5">
+            Nuestros Tipos de Instalación
+          </h2>
+          <div class="row g-4">
+            <!-- Interfonía Residencial -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card instalacion-card h-100 shadow-sm">
+                <img
+                  src="../images/interfon-residencial.jpg"
+                  class="card-img-top"
+                  alt="Interfonía Residencial"
+                />
+                <div class="card-body text-center">
+                  <h3>Interfonía Residencial</h3>
+                  <ul class="list-unstyled text-start">
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i>Hasta 4
+                      estaciones
+                    </li>
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i>Control
+                      remoto
+                    </li>
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i>Instalación
+                      en 24h
+                    </li>
+                  </ul>
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#formInstalacion"
+                    data-tipo="Interfonía Residencial"
+                  >
+                    Solicitar Instalación
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Videoporteros -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card instalacion-card h-100 shadow-sm">
+                <img
+                  src="../images/videoportero.jpg"
+                  class="card-img-top"
+                  alt="Videoporteros"
+                />
+                <div class="card-body text-center">
+                  <h3>Videoporteros</h3>
+                  <ul class="list-unstyled text-start">
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i>Pantalla HD
+                    </li>
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i
+                      >Reconocimiento facial
+                    </li>
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i>Conexión
+                      WiFi
+                    </li>
+                  </ul>
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#formInstalacion"
+                    data-tipo="Videoporteros"
+                  >
+                    Solicitar Instalación
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cercas Eléctricas -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card instalacion-card h-100 shadow-sm">
+                <img
+                  src="../images/cerca-electrica.jpg"
+                  class="card-img-top"
+                  alt="Cercas Eléctricas"
+                />
+                <div class="card-body text-center">
+                  <h3>Cercas Eléctricas</h3>
+                  <ul class="list-unstyled text-start">
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i>Hasta 500m
+                      lineales
+                    </li>
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i>Sistema
+                      anti-sabotaje
+                    </li>
+                    <li>
+                      <i class="fas fa-check text-primary me-2"></i
+                      >Certificación IP67
+                    </li>
+                  </ul>
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#formInstalacion"
+                    data-tipo="Cercas Eléctricas"
+                  >
+                    Solicitar Instalación
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal del Formulario -->
+      <div class="modal fade" id="formInstalacion" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title">Solicitud de Instalación</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="instalacionForm">
+                <input type="hidden" id="tipoInstalacion" />
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Tipo de instalación</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="displayTipo"
+                      readonly
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Seleccione equipo</label>
+                    <select class="form-select" required>
+                      <option value="">Seleccionar modelo...</option>
+                      <option>Commax CDV-70A</option>
+                      <option>Intec Pro XI-200</option>
+                      <option>ZKTeco SpeedFace</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Cantidad de unidades</label>
+                    <div class="input-group">
+                      <select class="form-select" required>
+                        <option value="">Tipo de propiedad...</option>
+                        <option>Casa individual</option>
+                        <option>Conjunto residencial</option>
+                        <option>Edificio departamental</option>
+                      </select>
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Número de unidades"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Fecha preferente</label>
+                    <input type="date" class="form-control" required />
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label">Detalles adicionales</label>
+                    <textarea
+                      class="form-control"
+                      rows="4"
+                      placeholder="Describa necesidades específicas..."
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        required
+                      />
+                      <label class="form-check-label">
+                        Acepto visita técnica previa
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                form="instalacionForm"
+              >
+                Enviar Solicitud
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección: Nuestras Especialidades -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-5 display-5">Especialidades Técnicas</h2>
+
+          <!-- Sistema de Pestañas -->
+          <div class="row g-5">
+            <div class="col-lg-3">
+              <div
+                class="nav flex-column nav-pills me-3"
+                id="v-pills-tab"
+                role="tablist"
+              >
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-residencial"
+                  type="button"
+                >
+                  <i class="fas fa-home me-2"></i>Residencial
+                </button>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-comercial"
+                  type="button"
+                >
+                  <i class="fas fa-building me-2"></i>Comercial
+                </button>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-industrial"
+                  type="button"
+                >
+                  <i class="fas fa-industry me-2"></i>Industrial
+                </button>
+              </div>
+            </div>
+
+            <div class="col-lg-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <!-- Contenido Residencial -->
+                <div class="tab-pane fade show active" id="v-pills-residencial">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="card h-100 shadow-sm">
+                        <img
+                          src="../images/interfon-para-casa.jpg"
+                          class="card-img-top"
+                          alt="Casas Unifamiliares"
+                        />
+                        <div class="card-body">
+                          <h4>Casas Unifamiliares</h4>
+                          <ul class="list-styled">
+                            <li>Sistemas básicos a premium</li>
+                            <li>Integración con domótica</li>
+                            <li>Instalación en 24-48h</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card h-100 shadow-sm">
+                        <img
+                          src="../images/interfon-edificio.jpg"
+                          class="card-img-top"
+                          alt="Condominios"
+                        />
+                        <div class="card-body">
+                          <h4>Conjuntos Residenciales</h4>
+                          <ul class="list-styled">
+                            <li>Soluciones escalables</li>
+                            <li>Control de acceso centralizado</li>
+                            <li>Hasta 100 unidades</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Contenido Comercial -->
+                <div class="tab-pane fade" id="v-pills-comercial">
+                  <div class="row g-4">
+                    <div class="col-md-4">
+                      <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                          <h4>
+                            <i class="fas fa-store text-primary me-2"></i
+                            >Pequeños Negocios
+                          </h4>
+                          <p>Soluciones económicas para:</p>
+                          <ul>
+                            <li>Tiendas</li>
+                            <li>Oficinas</li>
+                            <li>Locales comerciales</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                          <h4>
+                            <i class="fas fa-city text-primary me-2"></i
+                            >Edificios Corporativos
+                          </h4>
+                          <p>Sistemas empresariales con:</p>
+                          <ul>
+                            <li>Control de acceso multinivel</li>
+                            <li>Integración con CCTV</li>
+                            <li>Reportes automatizados</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                          <h4>
+                            <i class="fas fa-hotel text-primary me-2"></i
+                            >Centros Hospitalarios
+                          </h4>
+                          <p>Soluciones especializadas para:</p>
+                          <ul>
+                            <li>Control de áreas restringidas</li>
+                            <li>Sistemas anti-pánico</li>
+                            <li>Protocolos de emergencia</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Contenido Industrial -->
+                <div class="tab-pane fade" id="v-pills-industrial">
+                  <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                      <img
+                        src="../images/instalacion-industrial.jpg"
+                        class="img-fluid rounded-3"
+                        alt="Instalaciones Industriales"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h3>Soluciones para la Industria</h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <ul class="list-unstyled">
+                            <li class="mb-3">
+                              <i
+                                class="fas fa-check-circle text-primary me-2"
+                              ></i>
+                              Certificación ATEX
+                            </li>
+                            <li class="mb-3">
+                              <i
+                                class="fas fa-check-circle text-primary me-2"
+                              ></i>
+                              Sistemas anti-explosión
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <ul class="list-unstyled">
+                            <li class="mb-3">
+                              <i
+                                class="fas fa-check-circle text-primary me-2"
+                              ></i>
+                              Control de acceso biométrico
+                            </li>
+                            <li class="mb-3">
+                              <i
+                                class="fas fa-check-circle text-primary me-2"
+                              ></i>
+                              Monitoreo 24/7
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="alert alert-primary">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Todos nuestros sistemas cumplen con normas ISO 9001 y
+                        seguridad industrial
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>+52 555 123 4567</li>
+              <li><i class="fas fa-envelope me-2"></i>info@interaudio.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Horario</h5>
+            <p>
+              Lunes a Viernes: 9 AM - 6 PM<br />
+              Sábados: 10 AM - 2 PM
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-whatsapp fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2024 INTER AUDIO. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Configurar tipo de instalación
+      document
+        .getElementById("formInstalacion")
+        .addEventListener("show.bs.modal", function (e) {
+          const button = e.relatedTarget;
+          const tipo = button.getAttribute("data-tipo");
+          document.getElementById("tipoInstalacion").value = tipo;
+          document.getElementById("displayTipo").value = tipo;
+        });
+
+      // Manejar envío del formulario
+      document
+        .getElementById("instalacionForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const tipo = document.getElementById("tipoInstalacion").value;
+          alert(
+            `Solicitud para ${tipo} recibida. Pronto nos contactaremos para confirmar detalles.`
+          );
+
+          bootstrap.Modal.getInstance(
+            document.getElementById("formInstalacion")
+          ).hide();
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

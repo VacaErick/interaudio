@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <title>Catalogo</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-3"
+        style="background-color: #141d56"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" th:href="@{/}">
+            <img
+              th:src="@{/images/logo-inverso}"
+              src="/images/logo-inverso.png"
+              alt="INTER AUDIO"
+              width="100"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNav"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link d-flex align-items-center"
+                  th:href="@{/}"
+                  data-bs-toggle="tooltip"
+                  title="Página principal"
+                >
+                  <i class="fas fa-home me-2"></i>
+                  Inicio
+                </a>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link" th:href="@{/nosotros}">
+                  <i class="fas fa-users me-2"></i>
+                  Nosotros
+                </a>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-book-open me-2"></i>
+                  Catálogos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/LogoIntec.jpg" alt="Intec" width="150" />
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      th:href="@{/productos/catalogo}"
+                    >
+                      <img src="images/logoCommax" alt="Commax" width="150" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-tools me-2"></i>
+                  Instalaciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Interfonía</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Videoporteros</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Abrepuertas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                      >Cercas Eléctricas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-concierge-bell me-2"></i>
+                  Servicios
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Diagnóstico</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Reparación</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Actualización</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/servicios}"
+                      >Mantenimiento</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link btn-contact" th:href="@{/contacto}">
+                  <i class="fas fa-phone-volume me-2"></i>
+                  Contacto
+                </a>
+              </li>
+            </ul>
+
+            <form class="d-flex ms-lg-4" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control bg-dark text-white"
+                  placeholder="Buscar productos..."
+                  aria-label="Buscar"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <!-- Filtros -->
+        <div class="col-lg-3 mb-4">
+          <div class="filter-section sticky-top">
+            <h4 class="mb-3">Filtrar por:</h4>
+
+            <!-- Filtro de búsqueda -->
+            <div class="mb-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Buscar producto..."
+                id="searchInput"
+              />
+            </div>
+
+            <!-- Filtro de categorías -->
+            <div class="mb-4">
+              <h6>Categorías</h6>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="interfon"
+                  id="catInterfon"
+                />
+                <label class="form-check-label" for="catInterfon"
+                  >Interfonía</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="videoportero"
+                  id="catVideoportero"
+                />
+                <label class="form-check-label" for="catVideoportero"
+                  >Videoporteros</label
+                >
+              </div>
+              <!-- Agregar más categorías -->
+            </div>
+
+            <!-- Filtro de precio -->
+            <div class="mb-4">
+              <h6>Rango de precios</h6>
+              <input
+                type="range"
+                class="form-range price-range-slider"
+                min="0"
+                max="10000"
+                step="500"
+                id="priceRange"
+              />
+              <div class="d-flex justify-content-between">
+                <span id="minPrice">$0</span>
+                <span id="maxPrice">$10,000</span>
+              </div>
+            </div>
+
+            <!-- Botón limpiar filtros -->
+            <button class="btn btn-outline-secondary w-100" id="clearFilters">
+              Limpiar Filtros
+            </button>
+          </div>
+        </div>
+
+        <!-- Listado de productos -->
+        <div class="col-lg-9">
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+            id="productGrid"
+          >
+            <!-- Productos se cargarán aquí dinámicamente -->
+          </div>
+
+          <!-- Paginación -->
+          <nav class="mt-5" aria-label="Page navigation">
+            <ul class="pagination justify-content-center" id="pagination">
+              <!-- Los números de página se generarán dinámicamente -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Datos de ejemplo (simular 100 productos)
+      const products = Array.from({ length: 100 }, (_, i) => ({
+        id: i + 1,
+        name: `Producto ${i + 1}`,
+        price: Math.floor(Math.random() * 10000) + 500,
+        category: ["interfon", "videoportero", "accesorio"][
+          Math.floor(Math.random() * 3)
+        ],
+        image: `https://picsum.photos/300/200?random=${i}`,
+      }));
+
+      // Configuración
+      const productsPerPage = 12;
+      let currentPage = 1;
+      let filteredProducts = [...products];
+
+      // Función para mostrar productos
+      function displayProducts() {
+        const start = (currentPage - 1) * productsPerPage;
+        const end = start + productsPerPage;
+        const paginatedProducts = filteredProducts.slice(start, end);
+
+        const productGrid = document.getElementById("productGrid");
+        productGrid.innerHTML = "";
+
+        paginatedProducts.forEach((product) => {
+          productGrid.innerHTML += `
+                    <div class="col">
+                        <div class="card product-card h-100">
+                            <img src="${
+                              product.image
+                            }" class="card-img-top" alt="${product.name}">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.name}</h5>
+                                <p class="card-text text-primary fw-bold">$${product.price.toLocaleString()}</p>
+                                <a href="detalle-producto.html?id=${
+                                  product.id
+                                }" class="btn btn-outline-primary">
+                                    Ver Detalles
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+        });
+
+        updatePagination();
+      }
+
+      // Función para actualizar paginación
+      function updatePagination() {
+        const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+        const pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+          pagination.innerHTML += `
+                    <li class="page-item ${i === currentPage ? "active" : ""}">
+                        <a class="page-link" href="#" data-page="${i}">${i}</a>
+                    </li>
+                `;
+        }
+      }
+
+      // Función para aplicar filtros
+      function applyFilters() {
+        const searchTerm = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const selectedCategories = Array.from(
+          document.querySelectorAll('input[type="checkbox"]:checked')
+        ).map((checkbox) => checkbox.value);
+        const maxPrice = parseInt(document.getElementById("priceRange").value);
+
+        filteredProducts = products.filter((product) => {
+          const matchesSearch = product.name.toLowerCase().includes(searchTerm);
+          const matchesCategory =
+            selectedCategories.length === 0 ||
+            selectedCategories.includes(product.category);
+          const matchesPrice = product.price <= maxPrice;
+
+          return matchesSearch && matchesCategory && matchesPrice;
+        });
+
+        currentPage = 1;
+        displayProducts();
+      }
+
+      // Event Listeners
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", applyFilters);
+      document
+        .getElementById("priceRange")
+        .addEventListener("input", function () {
+          document.getElementById("maxPrice").textContent = `$${parseInt(
+            this.value
+          ).toLocaleString()}`;
+          applyFilters();
+        });
+      document
+        .querySelectorAll('input[type="checkbox"]')
+        .forEach((checkbox) => {
+          checkbox.addEventListener("change", applyFilters);
+        });
+      document.getElementById("clearFilters").addEventListener("click", () => {
+        document.getElementById("searchInput").value = "";
+        document
+          .querySelectorAll('input[type="checkbox"]')
+          .forEach((checkbox) => {
+            checkbox.checked = false;
+          });
+        document.getElementById("priceRange").value = 10000;
+        document.getElementById("maxPrice").textContent = "$10,000";
+        applyFilters();
+      });
+      document.getElementById("pagination").addEventListener("click", (e) => {
+        if (e.target.tagName === "A") {
+          e.preventDefault();
+          currentPage = parseInt(e.target.dataset.page);
+          displayProducts();
+          window.scrollTo(0, 0);
+        }
+      });
+
+      // Inicializar
+      document.getElementById("priceRange").value = 10000;
+      displayProducts();
+    </script>
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>+52 555 123 4567</li>
+              <li><i class="fas fa-envelope me-2"></i>info@interaudio.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Horario</h5>
+            <p>
+              Lunes a Viernes: 9 AM - 6 PM<br />
+              Sábados: 10 AM - 2 PM
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-whatsapp fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2024 INTER AUDIO. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

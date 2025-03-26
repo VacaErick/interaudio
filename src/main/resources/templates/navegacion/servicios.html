@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>INTER AUDIO</title>
+  </head>
+  <body style="background-color: #f0f0f0">
+    <!-- Barra de navegación -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-3"
+        style="background-color: #141d56"
+      >
+        <div class="container-fluid">
+          <!-- Logo con efecto hover -->
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="images/logo-inverso"
+              alt="INTER AUDIO"
+              width="100"
+              class="hover-scale"
+            />
+          </a>
+
+          <!-- Botón móvil mejorado -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú principal -->
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNav"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <!-- Inicio -->
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link d-flex align-items-center"
+                  href="index.html"
+                  data-bs-toggle="tooltip"
+                  title="Página principal"
+                >
+                  <i class="fas fa-home me-2"></i>
+                  Inicio
+                </a>
+              </li>
+
+              <!-- Nosotros -->
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="navegacion/nosotros.html">
+                  <i class="fas fa-users me-2"></i>
+                  Nosotros
+                </a>
+              </li>
+
+              <!-- Catálogos (Dropdown) -->
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-book-open me-2"></i>
+                  Catálogos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="navegacion/catalogoIntec.html"
+                    >
+                      <img src="images/LogoIntec.jpg" alt="Intec" width="150" />
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="navegacion/catalogoComax.html"
+                    >
+                      <img src="images/logoCommax" alt="Commax" width="150" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Instalaciones (Dropdown) -->
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-tools me-2"></i>
+                  Instalaciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/instalaciones.html#interfon"
+                      >Interfonía</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/instalaciones.html#videoportero"
+                      >Videoporteros</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/instalaciones.html#abrepuertas"
+                      >Abrepuertas</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/instalaciones.html#cerca"
+                      >Cercas Eléctricas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Servicios (Dropdown) -->
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-concierge-bell me-2"></i>
+                  Servicios
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/servicios.html#revision"
+                      >Diagnóstico</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/servicios.html#reparacion"
+                      >Reparación</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/servicios.html#cambio"
+                      >Actualización</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="navegacion/servicios.html#mantenimiento"
+                      >Mantenimiento</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Contacto destacado -->
+              <li class="nav-item mx-2">
+                <a class="nav-link btn-contact" href="navegacion/contacto.html">
+                  <i class="fas fa-phone-volume me-2"></i>
+                  Contacto
+                </a>
+              </li>
+            </ul>
+
+            <!-- Buscador mejorado -->
+            <form class="d-flex ms-lg-4" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control bg-dark text-white"
+                  placeholder="Buscar productos..."
+                  aria-label="Buscar"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="py-5">
+      <!-- Hero Section -->
+      <section class="servicios-hero bg-dark text-white py-5">
+        <div class="container text-center">
+          <h1 class="display-4 mb-3">Nuestros Servicios Especializados</h1>
+          <p class="lead">
+            Soluciones integrales para todas tus necesidades de seguridad
+          </p>
+        </div>
+      </section>
+
+      <!-- Listado de Servicios -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Diagnóstico -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card servicio-card h-100 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <i class="fas fa-search fa-3x text-primary mb-3"></i>
+                  <h3>Diagnóstico Técnico</h3>
+                  <p class="text-muted">
+                    Evaluación profesional de tus sistemas existentes
+                  </p>
+                  <ul class="list-unstyled text-start">
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Análisis completo
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Reporte detallado
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Recomendaciones expertas
+                    </li>
+                  </ul>
+                  <button
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#serviceModal"
+                    data-service="Diagnóstico Técnico"
+                  >
+                    Solicitar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reparaciones -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card servicio-card h-100 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                  <h3>Reparaciones</h3>
+                  <p class="text-muted">Solución rápida de fallas técnicas</p>
+                  <ul class="list-unstyled text-start">
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Servicio 24/7
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Repuestos originales
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Garantía por escrito
+                    </li>
+                  </ul>
+                  <button
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#serviceModal"
+                    data-service="Reparaciones de Emergencia"
+                  >
+                    Urgencias
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cotizaciones -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card servicio-card h-100 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <i
+                    class="fas fa-file-invoice-dollar fa-3x text-primary mb-3"
+                  ></i>
+                  <h3>Cotizaciones</h3>
+                  <p class="text-muted">
+                    Presupuestos personalizados sin costo
+                  </p>
+                  <ul class="list-unstyled text-start">
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Respuesta en 24h
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Comparativo de opciones
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Validez 30 días
+                    </li>
+                  </ul>
+                  <button
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#serviceModal"
+                    data-service="Cotización Personalizada"
+                  >
+                    Pedir Cotización
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mantenimiento -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card servicio-card h-100 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <i class="fas fa-clipboard-check fa-3x text-primary mb-3"></i>
+                  <h3>Mantenimiento</h3>
+                  <p class="text-muted">Programas preventivos y correctivos</p>
+                  <ul class="list-unstyled text-start">
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Planes anuales
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Actualizaciones incluidas
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      Monitoreo remoto
+                    </li>
+                  </ul>
+                  <button
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#serviceModal"
+                    data-service="Mantenimiento Preventivo"
+                  >
+                    Programar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal del Formulario -->
+      <div class="modal fade" id="serviceModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title">Solicitar Servicio</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="serviceForm">
+                <input type="hidden" id="selectedService" />
+                <div class="mb-3">
+                  <label class="form-label">Servicio seleccionado</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="displayService"
+                    readonly
+                  />
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Detalles del servicio</label>
+                    <textarea class="form-control" rows="4" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        required
+                      />
+                      <label class="form-check-label">
+                        Acepto los términos y condiciones
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="submit" form="serviceForm" class="btn btn-primary">
+                Enviar Solicitud
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resto de secciones (igual que antes) -->
+       <!-- Proceso de Servicio -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 display-5">Cómo funciona nuestro servicio</h2>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card proceso-card text-center p-3">
+                            <div class="card-body">
+                                <div class="numero-proceso">1</div>
+                                <h4>Solicitud</h4>
+                                <p>Contáctanos y describe tu necesidad</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card proceso-card text-center p-3">
+                            <div class="card-body">
+                                <div class="numero-proceso">2</div>
+                                <h4>Evaluación</h4>
+                                <p>Analizamos tu caso técnicamente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card proceso-card text-center p-3">
+                            <div class="card-body">
+                                <div class="numero-proceso">3</div>
+                                <h4>Propuesta</h4>
+                                <p>Te enviamos solución y costo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card proceso-card text-center p-3">
+                            <div class="card-body">
+                                <div class="numero-proceso">4</div>
+                                <h4>Ejecución</h4>
+                                <p>Implementamos con estándares de calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-5">
+            <div class="container text-center">
+                <div class="cta-servicios bg-primary text-white p-5 rounded-3">
+                    <h2 class="mb-4">¿Necesitas asesoría inmediata?</h2>
+                    <p class="fs-5 mb-4">Nuestros especialistas están disponibles 24/7</p>
+                    <a href="contacto.html" class="btn btn-light btn-lg px-5">
+                        <i class="fas fa-headset me-2"></i>Contactar ahora
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    </main>
+
+    <!-- Footer (igual que antes) -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone me-2"></i>+52 555 123 4567</li>
+              <li><i class="fas fa-envelope me-2"></i>info@interaudio.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Horario</h5>
+            <p>
+              Lunes a Viernes: 9 AM - 6 PM<br />
+              Sábados: 10 AM - 2 PM
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-whatsapp fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2024 INTER AUDIO. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Configurar servicio seleccionado en el modal
+      document
+        .getElementById("serviceModal")
+        .addEventListener("show.bs.modal", function (event) {
+          const button = event.relatedTarget;
+          const service = button.getAttribute("data-service");
+
+          document.getElementById("selectedService").value = service;
+          document.getElementById("displayService").value = service;
+        });
+
+      // Manejar envío del formulario
+      document
+        .getElementById("serviceForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Aquí iría la lógica de envío
+          const service = document.getElementById("selectedService").value;
+          alert(
+            `Solicitud para ${service} enviada correctamente. Nos pondremos en contacto contigo pronto.`
+          );
+
+          // Cerrar modal y resetear formulario
+          bootstrap.Modal.getInstance(
+            document.getElementById("serviceModal")
+          ).hide();
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
