@@ -22,10 +22,10 @@
         <div class="container-fluid">
           <a class="navbar-brand" th:href="@{/}">
             <img
-              src="images/logo-inverso"
+              th:src="@{/images/logo-inverso}"
+              src="/images/logo-inverso.png"
               alt="INTER AUDIO"
               width="100"
-              class="hover-scale"
             />
           </a>
 
@@ -59,7 +59,7 @@
               </li>
 
               <li class="nav-item mx-2">
-                <a class="nav-link" th:href="@{/nosotros}">
+                <a class="nav-link" th:href="@{/navegacion/nosotros}">
                   <i class="fas fa-users me-2"></i>
                   Nosotros
                 </a>
@@ -110,22 +110,22 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li>
-                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                    <a class="dropdown-item" th:href="@{navegacion/instalaciones}"
                       >Interfonía</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                    <a class="dropdown-item" th:href="@{navegacion/instalaciones}"
                       >Videoporteros</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                    <a class="dropdown-item" th:href="@{navegacion/instalaciones}"
                       >Abrepuertas</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" th:href="@{/instalaciones}"
+                    <a class="dropdown-item" th:href="@{navegacion/instalaciones}"
                       >Cercas Eléctricas</a
                     >
                   </li>
@@ -175,19 +175,36 @@
               </li>
             </ul>
 
-            <form class="d-flex ms-lg-4" role="search">
-              <div class="input-group">
-                <input
-                  type="search"
-                  class="form-control bg-dark text-white"
-                  placeholder="Buscar productos..."
-                  aria-label="Buscar"
-                />
-                <button class="btn btn-outline-light" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </form>
+            <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user me-2"></i>
+              Cuenta
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" th:href="@{/login}">
+                  <i class="fas fa-sign-in-alt me-2"></i>
+                  Ingresar
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/registro}">
+                  <i class="fas fa-user-plus me-2"></i>
+                  Crear Usuario
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" th:href="@{/perfil}">
+                  <i class="fas fa-cog me-2"></i>
+                  Mi Perfil
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
           </div>
         </div>
       </nav>

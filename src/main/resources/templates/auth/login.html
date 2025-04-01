@@ -177,78 +177,56 @@
             </ul>
 
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown mx-2">
-                <a
-                  class="nav-link dropdown-toggle d-flex align-items-center"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-user me-2"></i>
-                  Cuenta
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user me-2"></i>
+              Cuenta
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" th:href="@{/login}">
+                  <i class="fas fa-sign-in-alt me-2"></i>
+                  Ingresar
                 </a>
-                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-                  <li>
-                    <a class="dropdown-item" th:href="@{/login}">
-                      <i class="fas fa-sign-in-alt me-2"></i>
-                      Ingresar
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" th:href="@{/registro}">
-                      <i class="fas fa-user-plus me-2"></i>
-                      Crear Usuario
-                    </a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" th:href="@{/perfil}">
-                      <i class="fas fa-cog me-2"></i>
-                      Mi Perfil
-                    </a>
-                  </li>
-                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/registro}">
+                  <i class="fas fa-user-plus me-2"></i>
+                  Crear Usuario
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" th:href="@{/perfil}">
+                  <i class="fas fa-cog me-2"></i>
+                  Mi Perfil
+                </a>
               </li>
             </ul>
+          </li>
+        </ul>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container py-5">
-      <div class="row">
-        <!-- Listado de productos -->
-        <div class="col-12">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- Iteración de productos desde la base de datos -->
-            <div class="col" th:each="producto : ${productos}">
-              <div class="card product-card h-100">
-                <img
-                  th:src="@{/images/{img}(img=${producto.imagen})}"
-                  class="card-img-top product-image"
-                  alt="Imagen del producto"
-                />
-                <div class="card-body">
-                  <h5 class="card-title" th:text="${producto.nombre}"></h5>
-                  <p class="card-text text-primary fw-bold">
-                    $<span
-                      th:text="${#numbers.formatDecimal(producto.precio, 1, 'COMMA', 2, 'POINT')}"
-                    ></span>
-                  </p>
-                  <a
-                    th:href="@{/productos/detallesproductos/{id}(id=${producto.id})}"
-                    class="btn btn-outline-primary"
-                  >
-                    Ver Detalles
-                  </a>
-                </div>
-              </div>
+    <body>
+    <div class="container mt-5">
+        <h1>Iniciar Sesión</h1>
+        <form th:action="@{/login}" method="post">
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" required>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
+    </div>
+</body>
 
     <footer class="bg-dark text-white py-4 mt-5">
       <div class="container">
@@ -290,4 +268,3 @@
     </footer>
   </body>
 </html>
--->
